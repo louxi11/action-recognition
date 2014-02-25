@@ -1,0 +1,299 @@
+
+==================Begin=====================
+
+Program Description:
+   harris + hof + llc + l-svm
+   dataPath : /home/wangxz/dataset/kth/ExtractedFeatures/hoghof
+   centerDir: centers_hof
+   log name : harris_hof_llc_2014-2-25.log
+   fig name : harris_hof_llc_2014-2-25.fig
+   using pretrained centers
+
+center = 10
+Accuracy is 57.41%
+Current iter runs 64 s
+confusion matrix is:
+    22     3     0     0     0     0
+     3    20    11     0     0     0
+    10    13    25     0     0     2
+     0     0     0    16    12    14
+     0     0     0    18    23     2
+     1     0     0     2     1    18
+----------------------
+center = 20
+Accuracy is 70.37%
+Current iter runs 64 s
+confusion matrix is:
+    29     2     2     0     0     0
+     6    28     6     0     0     0
+     0     6    28     0     0     0
+     0     0     0    24    18    10
+     0     0     0     8    17     0
+     1     0     0     4     1    26
+----------------------
+center = 30
+Accuracy is 75.93%
+Current iter runs 63 s
+confusion matrix is:
+    32     4     0     0     0     0
+     3    31     3     0     0     0
+     0     1    33     0     0     0
+     0     0     0    22    14     9
+     0     0     0    10    19     0
+     1     0     0     4     3    27
+----------------------
+center = 40
+Accuracy is 78.24%
+Current iter runs 63 s
+confusion matrix is:
+    33     2     0     0     0     0
+     2    32     6     0     0     0
+     0     2    30     0     0     0
+     0     0     0    29    19     7
+     0     0     0     4    16     0
+     1     0     0     3     1    29
+----------------------
+center = 50
+Accuracy is 77.78%
+Current iter runs 66 s
+confusion matrix is:
+    32     1     0     0     0     0
+     3    35     7     0     0     0
+     0     0    29     0     0     0
+     0     0     0    28    19     8
+     0     0     0     5    16     0
+     1     0     0     3     1    28
+----------------------
+center = 60
+Accuracy is 81.02%
+Current iter runs 66 s
+confusion matrix is:
+    34     1     1     0     0     0
+     2    35     4     0     0     0
+     0     0    31     0     0     0
+     0     0     0    28    16     7
+     0     0     0     4    18     0
+     0     0     0     4     2    29
+----------------------
+center = 70
+Accuracy is 81.48%
+Current iter runs 66 s
+confusion matrix is:
+    33     2     0     0     0     0
+     2    34     6     0     0     0
+     0     0    30     0     0     0
+     0     0     0    28    14     6
+     0     0     0     4    21     0
+     1     0     0     4     1    30
+----------------------
+center = 80
+Accuracy is 81.02%
+Current iter runs 67 s
+confusion matrix is:
+    32     1     0     0     0     0
+     3    35     6     0     0     0
+     0     0    30     0     0     0
+     1     0     0    28    15     6
+     0     0     0     4    20     0
+     0     0     0     4     1    30
+----------------------
+center = 90
+Accuracy is 81.02%
+Current iter runs 67 s
+confusion matrix is:
+    31     2     1     0     0     0
+     4    34     5     0     0     0
+     0     0    30     0     0     0
+     0     0     0    29    15     5
+     0     0     0     4    20     0
+     1     0     0     3     1    31
+----------------------
+center = 100
+Accuracy is 82.87%
+Current iter runs 67 s
+confusion matrix is:
+    34     1     0     0     0     0
+     2    35     5     0     0     0
+     0     0    31     0     0     0
+     0     0     0    27    13     6
+     0     0     0     5    22     0
+     0     0     0     4     1    30
+----------------------
+center = 200
+Accuracy is 82.87%
+Current iter runs 71 s
+confusion matrix is:
+    34     1     1     0     0     0
+     1    35     6     0     0     0
+     0     0    29     0     0     0
+     0     0     0    28    14     5
+     0     0     0     5    22     0
+     1     0     0     3     0    31
+----------------------
+center = 300
+Accuracy is 87.50%
+Current iter runs 75 s
+confusion matrix is:
+    35     1     0     0     0     0
+     1    35     7     0     0     0
+     0     0    29     0     0     0
+     0     0     0    32    13     1
+     0     0     0     1    23     0
+     0     0     0     3     0    35
+----------------------
+center = 400
+Accuracy is 86.57%
+Current iter runs 79 s
+confusion matrix is:
+    35     1     1     0     0     0
+     1    35     8     0     0     0
+     0     0    27     0     0     0
+     0     0     0    29    10     0
+     0     0     0     5    25     0
+     0     0     0     2     1    36
+----------------------
+center = 500
+Accuracy is 86.11%
+Current iter runs 84 s
+confusion matrix is:
+    35     0     2     0     0     0
+     1    36     8     0     0     0
+     0     0    26     0     0     0
+     0     0     0    30    11     2
+     0     0     0     3    25     0
+     0     0     0     3     0    34
+----------------------
+center = 600
+Accuracy is 87.50%
+Current iter runs 88 s
+confusion matrix is:
+    34     0     0     0     0     0
+     2    36     7     0     0     0
+     0     0    29     0     0     0
+     0     0     0    31    10     2
+     0     0     0     3    25     0
+     0     0     0     2     1    34
+----------------------
+center = 700
+Accuracy is 88.89%
+Current iter runs 93 s
+confusion matrix is:
+    36     1     1     0     0     0
+     0    35     7     0     0     0
+     0     0    28     0     0     0
+     0     0     0    33    11     0
+     0     0     0     1    24     0
+     0     0     0     2     1    36
+----------------------
+center = 800
+Accuracy is 86.57%
+Current iter runs 97 s
+confusion matrix is:
+    35     0     1     0     0     0
+     1    36     8     0     0     0
+     0     0    27     0     0     0
+     0     0     0    32    11     3
+     0     0     0     3    24     0
+     0     0     0     1     1    33
+----------------------
+center = 900
+Accuracy is 88.43%
+Current iter runs 102 s(about 2 min)
+confusion matrix is:
+    34     0     1     0     0     0
+     2    36     8     0     0     0
+     0     0    27     0     0     0
+     0     0     0    33    10     0
+     0     0     0     2    25     0
+     0     0     0     1     1    36
+----------------------
+center = 1000
+Accuracy is 87.96%
+Current iter runs 108 s(about 2 min)
+confusion matrix is:
+    34     1     1     0     0     0
+     2    35     7     0     0     0
+     0     0    28     0     0     0
+     0     0     0    32    11     0
+     0     0     0     2    25     0
+     0     0     0     2     0    36
+----------------------
+center = 2000
+Accuracy is 90.74%
+Current iter runs 158 s(about 3 min)
+confusion matrix is:
+    35     0     0     0     0     0
+     1    36     6     0     0     0
+     0     0    30     0     0     0
+     0     0     0    33    10     0
+     0     0     0     1    26     0
+     0     0     0     2     0    36
+----------------------
+center = 3000
+Accuracy is 90.28%
+Current iter runs 205 s(about 3 min)
+confusion matrix is:
+    35     0     1     0     0     0
+     1    36     6     0     0     0
+     0     0    29     0     0     0
+     0     0     0    34    11     0
+     0     0     0     1    25     0
+     0     0     0     1     0    36
+----------------------
+center = 4000
+Accuracy is 92.13%
+Current iter runs 250 s(about 4 min)
+confusion matrix is:
+    35     0     0     0     0     0
+     1    36     5     0     0     0
+     0     0    31     0     0     0
+     0     0     0    35    10     0
+     0     0     0     0    26     0
+     0     0     0     1     0    36
+----------------------
+center = 5000
+Accuracy is 91.67%
+Current iter runs 299 s(about 5 min)
+confusion matrix is:
+    35     0     0     0     0     0
+     1    36     3     0     0     0
+     0     0    33     0     0     0
+     0     0     0    33    11     0
+     0     0     0     3    25     0
+     0     0     0     0     0    36
+----------------------
+center = 6000
+Accuracy is 93.06%
+Current iter runs 346 s(about 6 min)
+confusion matrix is:
+    35     0     0     0     0     0
+     1    36     2     0     0     0
+     0     0    34     0     0     0
+     0     0     0    34    10     0
+     0     0     0     1    26     0
+     0     0     0     1     0    36
+----------------------
+Figure Information:
+
+   Center numbers:
+  Columns 1 through 6
+          10          20          30          40          50          60
+  Columns 7 through 12
+          70          80          90         100         200         300
+  Columns 13 through 18
+         400         500         600         700         800         900
+  Columns 19 through 24
+        1000        2000        3000        4000        5000        6000
+
+
+   Accuracies:
+  Columns 1 through 7
+   57.4074   70.3704   75.9259   78.2407   77.7778   81.0185   81.4815
+  Columns 8 through 14
+   81.0185   81.0185   82.8704   82.8704   87.5000   86.5741   86.1111
+  Columns 15 through 21
+   87.5000   88.8889   86.5741   88.4259   87.9630   90.7407   90.2778
+  Columns 22 through 24
+   92.1296   91.6667   93.0556
+program total runs 2715 s(about 45 min)
+===================End======================
