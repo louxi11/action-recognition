@@ -72,7 +72,7 @@ if para.isLoadCenter
 else 
     tic;
     center = my_kmeans(data, k);
-    fprintf('\nKmeans takes time: %.0f s.\n', toc);
+    fprintf('Kmeans takes time: %.0f s.\n', toc);
     if para.isSaveCenter
         if ~exist(cPath, 'dir')
             mkdir(cPath);

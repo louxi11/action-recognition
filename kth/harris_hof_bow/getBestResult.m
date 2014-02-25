@@ -6,7 +6,7 @@ para.dataPath = '/home/wangxz/dataset/kth/ExtractedFeatures/hoghof';
 para.isSaveLog = 1;     % 0 - not save, 1 - save
 para.logFilename = 'harris_hof_bow_2014-2-25.log';
 para.figFilename = 'harris_hof_bow_2014-2-25.fig';
-para.isLoadCenter = 1;  % 0 - compute directly, 1 - load only
+para.isLoadCenter = 0;  % 0 - compute directly, 1 - load only
 para.isSaveCenter = 0;  % 0 - not save, 1 - save
 para.centerDir = 'centers_hof';
 %=========================================================
