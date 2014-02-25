@@ -4,14 +4,19 @@ function [] = getBestResult()
 centers = [10:10:100 200:100:1000 2000:1000:6000];
 para.dataPath = '/home/wangxz/dataset/kth/ExtractedFeatures/hoghof';
 para.isSaveLog = 1;     % 0 - not save, 1 - save
-para.logFilename = 'harris_hof_bow_2014-2-25.fig';
-para.figFilename = 'harris_hof_bow_2014-2-25.log';
-para.isLoadCenter = 0;  % 0 - compute directly, 1 - load only
+para.logFilename = 'harris_hof_bow_2014-2-25.log';
+para.figFilename = 'harris_hof_bow_2014-2-25.fig';
+para.isLoadCenter = 1;  % 0 - compute directly, 1 - load only
 para.isSaveCenter = 0;  % 0 - not save, 1 - save
 para.centerDir = 'centers_hof';
 %=========================================================
 
 programBegin = tic;
+
+if para.isSaveLog
+    diary(para.logFilename);
+end
+
 fprintf('\n==================Begin=====================\n');
 fprintf('\nProgram Description:\n');
 fprintf('   harris + hof + bow + l-svm\n');
@@ -25,10 +30,6 @@ else
     fprintf('   training centers directly\n\n');
 end
 
-
-if para.isSaveLog
-    diary(para.logFilename);
-end
 
 addToolPath();
 

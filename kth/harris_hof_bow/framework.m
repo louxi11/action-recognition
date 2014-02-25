@@ -17,6 +17,7 @@ end
 
 
 for i = 1:length(centerNums)
+    iterBegin = tic;
     ncenter = centerNums(i);
     fprintf('center = %d\n', ncenter);
     center = getCenter(trFeatures, ncenter, para);
@@ -30,11 +31,17 @@ for i = 1:length(centerNums)
 
     %% Test with trained model
     teLabel = cell2mat(teResponses);
-    [predicted_label, stats, ~] = svmpredict(teLabel, teSamples, svm);
+    [predicted_label, stats, ~] = svmpredict(teLabel, teSamples, svm, '-q');
 
     %% Print result
     acc(i) = stats(1);
-    %fprintf('Accuracy is %f\n', acc(i));
+    fprintf('Accuracy is %.2f%\n', acc(i));
+    time = toc(iterBegin);
+    fprintf('Current iter runs %.0f s', time);
+    if time > 100 
+        fprintf('(about %.0f min)', time/60);
+    end
+    fprintf('\n');
 
     disp('confusion matrix is:');
     disp(getConfusionMatrix(6, predicted_label, teLabel));
