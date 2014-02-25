@@ -35,7 +35,7 @@ for i = 1:length(centerNums)
 
     %% Print result
     acc(i) = stats(1);
-    fprintf('Accuracy is %.2f%\n', acc(i));
+    fprintf('Accuracy is %.2f%%\n', acc(i));
     time = toc(iterBegin);
     fprintf('Current iter runs %.0f s', time);
     if time > 100 
@@ -67,7 +67,7 @@ if para.isLoadCenter
     if exist(cPathFull, 'file')==2
         load (cPathFull);
     else
-        error('Error, cannot load center as center do not exist!');
+        error('Error, cannot load center as center do not exist!\n');
     end
 else 
     tic;
