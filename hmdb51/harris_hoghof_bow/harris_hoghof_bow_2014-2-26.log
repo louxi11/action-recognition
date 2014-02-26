@@ -1,0 +1,95 @@
+
+==================Begin=====================
+
+Program Description:
+   harris + hof + bow + l-svm
+   dataPath : /home/wangxz/dataset/hmdb51/ExtractedFeatures/hoghof/split_2
+   centerDir: centers_2e5
+   log name : harris_hoghof_bow_2014-2-26.log
+   fig name : harris_hoghof_bow_2014-2-26.fig
+   using pretrained centers
+
+
+12 train videos have been discarded.
+
+5 test videos have been discarded.
+center = 100
+Accuracy is 16.85%
+Current iter runs 23 s
+----------------------
+center = 200
+Accuracy is 19.08%
+Current iter runs 37 s
+----------------------
+center = 300
+Accuracy is 19.67%
+Current iter runs 53 s
+----------------------
+center = 400
+Accuracy is 21.05%
+Current iter runs 65 s
+----------------------
+center = 500
+Accuracy is 21.57%
+Current iter runs 76 s
+----------------------
+center = 600
+Accuracy is 22.56%
+Current iter runs 88 s
+----------------------
+center = 700
+Accuracy is 23.28%
+Current iter runs 98 s
+----------------------
+center = 800
+Accuracy is 22.10%
+Current iter runs 109 s(about 2 min)
+----------------------
+center = 900
+Accuracy is 23.54%
+Current iter runs 118 s(about 2 min)
+----------------------
+center = 1000
+Accuracy is 23.08%
+Current iter runs 128 s(about 2 min)
+----------------------
+center = 2000
+Accuracy is 24.46%
+Current iter runs 218 s(about 4 min)
+----------------------
+center = 3000
+Accuracy is 26.69%
+Current iter runs 294 s(about 5 min)
+----------------------
+center = 4000
+Accuracy is 25.11%
+Current iter runs 447 s(about 7 min)
+----------------------
+center = 5000
+Accuracy is 25.25%
+Current iter runs 764 s(about 13 min)
+----------------------
+center = 6000
+Accuracy is 26.23%
+Current iter runs 899 s(about 15 min)
+----------------------
+Figure Information:
+
+   Center numbers:
+  Columns 1 through 6
+         100         200         300         400         500         600
+  Columns 7 through 12
+         700         800         900        1000        2000        3000
+  Columns 13 through 15
+        4000        5000        6000
+
+
+   Accuracies:
+  Columns 1 through 7
+   16.8525   19.0820   19.6721   21.0492   21.5738   22.5574   23.2787
+  Columns 8 through 14
+   22.0984   23.5410   23.0820   24.4590   26.6885   25.1148   25.2459
+  Column 15
+   26.2295
+program total runs 3455 s(about 58 min)
+===================End======================
