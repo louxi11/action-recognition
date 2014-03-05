@@ -1,5 +1,5 @@
 function [acc] = framework(centerNums, para)
-% Description : hof + bow + l-svm
+% Description : hoghof + bow + l-svm
 
 dataPath = para.dataPath;
 acc = zeros(1, length(centerNums));
