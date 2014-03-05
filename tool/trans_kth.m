@@ -31,7 +31,6 @@ n = 25;
 % Persons matrices and responses
 personsMats = cell(1, n);
 personsResponses = cell(1, n);
-% personsCoordinates = cell(1, n);
 
 map = containers.Map();
 map('boxing') = 1;
@@ -44,6 +43,8 @@ map('walking') = 6;
 files = dir([dir_path '/*.txt']);
 
 for i = 1 : length(files)
+    fprintf('\nstart to process No. %d video...\n', i);
+    t_start = tic;
     [fea, pid, claName] = transSingle(fullfile(dir_path, files(i).name));
     if ~map.isKey(claName)
         disp('Parseing error!\n');
@@ -53,21 +54,25 @@ for i = 1 : length(files)
     personVideos = personsMats{pid};
     personResponses = personsResponses{pid};
 
-j   personVideos = [personVideos; {fea}];
+    personVideos = [personVideos; {fea}];
     personResponses = [personResponses; {class}];
 
     personsMats{pid} = personVideos;
     personsResponses{pid} = personResponses;
+    fprintf('No. %d video completed, takes time: %.0f min\n', i, toc(t_start)/60);
 end
 
 
 save('personsMats.mat', 'personsMats', '-v7.3');
 save('personsResponses.mat', 'personsResponses', '-v7.3');
 
-fprintf('extract features total use time: %f hour\n', toc(programBegin)/3600);
-
+tot_time = toc(programBegin)/60;
+fprintf('extract features total use time: %.0f min\n', tot_time);
+if tot_time > 100
+    fprintf('That is %.1f hours\n', tot_time/60);
 end
 
+end
 
 
 
