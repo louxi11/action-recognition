@@ -41,27 +41,43 @@ map('running') = 5;
 map('walking') = 6;
 
 files = dir([dir_path '/*.txt']);
+nVideo = length(files);
+data = cell(1, nVideo);
 
-for i = 1 : length(files)
+% matlabpool local 10
+
+for i = 1 : nVideo
     fprintf('\nstart to process No. %d video...\n', i);
+
     t_start = tic;
     [fea, pid, claName] = transSingle(fullfile(dir_path, files(i).name));
-    if ~map.isKey(claName)
+    temp = [{fea},{pid},{claName}];
+    data{i} = temp;
+
+    fprintf('No. %d video completed, takes time: %.0f min\n', i, toc(t_start)/60);
+end
+
+% matlabpool close
+
+for i = 1 : nVideo
+    if ~map.isKey(data{i}{3})
         disp('Parseing error!\n');
         return;
     end
-    class = map(claName);
+
+    fea = data{i}{1};
+    pid = data{i}{2};
+    claNo = map(data{i}{3});
+
     personVideos = personsMats{pid};
     personResponses = personsResponses{pid};
 
     personVideos = [personVideos; {fea}];
-    personResponses = [personResponses; {class}];
+    personResponses = [personResponses; {claNo}];
 
     personsMats{pid} = personVideos;
     personsResponses{pid} = personResponses;
-    fprintf('No. %d video completed, takes time: %.0f min\n', i, toc(t_start)/60);
 end
-
 
 save('personsMats.mat', 'personsMats', '-v7.3');
 save('personsResponses.mat', 'personsResponses', '-v7.3');
