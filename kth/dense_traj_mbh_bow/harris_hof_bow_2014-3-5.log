@@ -1,0 +1,107 @@
+==================Begin=====================
+
+Program Description:
+   dense trajectory + mbh + bow + l-svm
+   dataPath : /home/wangxz/dataset/kth/ExtractedFeatures/dense_traj
+   centerDir: centers_hof
+   log name : harris_hof_bow_2014-3-5.log
+   fig name : harris_hof_bow_2014-3-5_ins.fig
+   training centers directly
+
+center = 10
+Kmeans takes time: 65 s.
+Accuracy is 55.56%
+Current iter runs 69 s
+confusion matrix is:
+    22     6     0     0     0     0
+     9    18     4     0     3     0
+     2     7    32     0     1     0
+     0     0     0    26    21    18
+     0     0     0     2     4     0
+     3     5     0     8     7    18
+----------------------
+center = 100
+Kmeans takes time: 154 s.
+Accuracy is 84.72%
+Current iter runs 161 s(about 3 min)
+confusion matrix is:
+    35     9     2     0     0     0
+     1    27     1     0     0     0
+     0     0    33     0     0     0
+     0     0     0    31    12     0
+     0     0     0     1    21     0
+     0     0     0     4     3    36
+----------------------
+center = 500
+Kmeans takes time: 548 s.
+Accuracy is 90.74%
+Current iter runs 567 s(about 9 min)
+confusion matrix is:
+    36     8     0     0     0     0
+     0    28     2     0     0     0
+     0     0    34     0     0     0
+     0     0     0    34     8     0
+     0     0     0     1    28     0
+     0     0     0     1     0    36
+----------------------
+center = 1000
+Kmeans takes time: 1058 s.
+Accuracy is 92.59%
+Current iter runs 1093 s(about 18 min)
+confusion matrix is:
+    36     5     0     0     0     0
+     0    31     2     0     0     0
+     0     0    34     0     0     0
+     0     0     0    35     8     0
+     0     0     0     1    28     0
+     0     0     0     0     0    36
+----------------------
+center = 2000
+Kmeans takes time: 2053 s.
+Accuracy is 93.06%
+Current iter runs 2118 s(about 35 min)
+confusion matrix is:
+    36     4     0     0     0     0
+     0    32     2     0     0     0
+     0     0    34     0     0     0
+     0     0     0    35     8     0
+     0     0     0     1    28     0
+     0     0     0     0     0    36
+----------------------
+center = 3000
+Kmeans takes time: 3067 s.
+Accuracy is 93.52%
+Current iter runs 3162 s(about 53 min)
+confusion matrix is:
+    36     3     0     0     0     0
+     0    33     2     0     0     0
+     0     0    34     0     0     0
+     0     0     0    35     8     0
+     0     0     0     1    28     0
+     0     0     0     0     0    36
+----------------------
+center = 4000
+Kmeans takes time: 4096 s.
+Accuracy is 93.52%
+Current iter runs 4316 s(about 72 min)
+confusion matrix is:
+    36     3     0     0     0     0
+     0    33     2     0     0     0
+     0     0    34     0     0     0
+     0     0     0    35     8     0
+     0     0     0     1    28     0
+     0     0     0     0     0    36
+----------------------
+Figure Information:
+
+   Center numbers:
+  Columns 1 through 6
+          10         100         500        1000        2000        3000
+  Column 7
+        4000
+
+
+   Accuracies:
+   55.5556   84.7222   90.7407   92.5926   93.0556   93.5185   93.5185
+program total runs 11587 s(about 193 min)
+===================End======================
