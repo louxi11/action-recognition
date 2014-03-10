@@ -2,7 +2,7 @@ function [] = getBestResult()
 
 %=========================================================
 %centers = [10:10:100 200:100:1000 2000:1000:6000];
-centers = [10 100 500 1000  4000];
+centers = [10 100 500 1000 2000 3000 4000];
 para.dataPath = '/home/wangxz/dataset/kth/ExtractedFeatures/dense_traj';
 para.isSaveLog = 1;     % 0 - not save, 1 - save
 para.logFilename = 'harris_hof_bow_2014-3-5.log';
