@@ -7,7 +7,7 @@ split_dir = 'split1'
 def needFix(ss):
     ret = False
     if ss.find('!') > -1:
-        ss = ss.replace('!', '')
+        ss = ss.replace('!', '_')
         ret = True
     if ss.find('(') > -1:
         ss = ss.replace('(', '_')
@@ -22,34 +22,37 @@ def needFix(ss):
         ss = ss.replace(']', '_')
         ret = True
     if ss.find('#') > -1:
-        ss = ss.replace('#', '')
+        ss = ss.replace('#', '_')
         ret = True
     if ss.find('@') > -1:
-        ss = ss.replace('@', '')
+        ss = ss.replace('@', '_')
         ret = True
     if ss.find('{') > -1:
-        ss = ss.replace('{', '')
+        ss = ss.replace('{', '_')
         ret = True
     if ss.find('}') > -1:
-        ss = ss.replace('}', '')
+        ss = ss.replace('}', '_')
         ret = True
     if ss.find('+') > -1:
-        ss = ss.replace('+', '')
+        ss = ss.replace('+', '_')
         ret = True
     if ss.find('&') > -1:
-        ss = ss.replace('&', '')
+        ss = ss.replace('&', '_')
         ret = True
     if ss.find('~') > -1:
-        ss = ss.replace('~', '')
+        ss = ss.replace('~', '_')
         ret = True
     if ss.find(';') > -1:
-        ss = ss.replace(';', '')
+        ss = ss.replace(';', '_')
+        ret = True
+    if ss.find('-') > -1:
+        ss = ss.replace('-', '_')
         ret = True
     return (ret,ss)
 
 
 import re
-p = re.compile('[a-zA-Z0-9\-\.\_]')
+p = re.compile('[a-zA-Z0-9\.\_]')
 spe_list = []
 
 def findSpec(filename):
@@ -90,7 +93,7 @@ def delExtraFile(filename):
         #print tag
         if int(tag) == 0:  # then delete this video
             vid_name = os.path.join(out_dir,dirname,oldName)
-            #os.remove(vid_name)
+            os.remove(vid_name)
             cnt = cnt + 1
             continue
         (bFix,newName) = needFix(oldName)
@@ -98,7 +101,7 @@ def delExtraFile(filename):
         if bFix:
             oldName = os.path.join(out_dir,dirname,oldName)
             newName = os.path.join(out_dir,dirname,newName)
-            #os.rename(oldName, newName)
+            os.rename(oldName, newName)
     f.close()
 
 def checkResult(dirname):
